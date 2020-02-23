@@ -14,6 +14,5 @@ public class KafkaApplicationFacade {
 
     @Scheduled(fixedDelay = 5000)
     public void send() {
-
     }
 }

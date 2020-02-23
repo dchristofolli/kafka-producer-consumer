@@ -21,6 +21,4 @@ public class UserEntity {
     private String cpf;
 
     private String email;
-
-    private String password;
 }

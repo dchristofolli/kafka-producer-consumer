@@ -97,3 +97,12 @@ fabric.properties
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+.gradle/6.0.1/vcsMetadata-1/
+.gradle/6.1.1/vcsMetadata-1/
+.idea/sonarlint/issuestore/8/
+.idea/sonarlint/issuestore/a/
+.idea/sonarlint/issuestore/e/
+build/classes/java/test/
+build/generated/
+build/tmp/compileJava/
+build/tmp/compileTestJava/
