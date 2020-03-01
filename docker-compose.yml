@@ -1,17 +1,5 @@
 version: '3'
 services:
-  mongo:
-    image: mongo
-    ports:
-      - 27017:27017
-    volumes:
-      - ./mongo-data:/data/db
-  mongo-express:
-    image: mongo-express
-    ports:
-      - 8081:8081
-    depends_on:
-      - mongo
   kafka:
     image: confluent/kafka
     container_name: kafka

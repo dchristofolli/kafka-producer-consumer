@@ -1,4 +1,4 @@
-package br.com.dchristofolli.kafka.consumer;
+package br.com.dchristofolli.kafka;
 
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
@@ -12,11 +12,9 @@ import java.util.concurrent.CountDownLatch;
 public class EventConsumer {
     private CountDownLatch latch = new CountDownLatch(1);
 
-    @KafkaListener(topics = {
-
-    })
-    public void entidadeComercialReceiver(@Payload String payload) {
-        log.info("received payload='{}'", payload);
-        latch.countDown();
-    }
+//    @KafkaListener(topics = "My_Kafka_Topic")
+//    public void kafkaConsumer(@Payload Integer payload) {
+//        log.info("received payload='{}'", payload);
+//        latch.countDown();
+//    }
 }

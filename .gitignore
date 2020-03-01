@@ -50,6 +50,7 @@ mongo-data
 
 # IntelliJ
 out/
+.idea/sonarlint
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -106,3 +107,9 @@ build/classes/java/test/
 build/generated/
 build/tmp/compileJava/
 build/tmp/compileTestJava/
+.idea/sonarlint/issuestore/0/5/
+.idea/sonarlint/issuestore/3/2/
+.idea/sonarlint/issuestore/3/8/
+.idea/sonarlint/issuestore/9/0/
+.idea/sonarlint/issuestore/9/f/
+.idea/sonarlint/issuestore/d/

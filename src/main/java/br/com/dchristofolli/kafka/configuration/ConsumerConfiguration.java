@@ -1,5 +1,6 @@
 package br.com.dchristofolli.kafka.configuration;
 
+import br.com.dchristofolli.kafka.EventConsumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -27,9 +28,7 @@ public class ConsumerConfiguration {
         properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
         properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
         properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
-        properties.put(ConsumerConfig.GROUP_ID_CONFIG, "Event");
-        properties.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
-
+        properties.put(ConsumerConfig.GROUP_ID_CONFIG, "Kafka");
         return properties;
     }
 
@@ -47,8 +46,8 @@ public class ConsumerConfiguration {
         return factory;
     }
 
-//    @Bean
-//    public EventConsumer consumer() {
-//        return new EventConsumer();
-//    }
+    @Bean
+    public EventConsumer consumer() {
+        return new EventConsumer();
+    }
 }
