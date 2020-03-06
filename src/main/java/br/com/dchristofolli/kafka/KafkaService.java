@@ -12,18 +12,18 @@ import java.util.Random;
 @Slf4j
 public class KafkaService {
     private EventProducer eventProducer;
-    private Integer index=0;
+    private Integer index=1;
 
     public Integer generator() {
         return new Random().nextInt(100);
     }
 
     public void send(String topic, ProducerRecord<Integer, Integer> producerRecord) {
+        index +=1;
         eventProducer.send(topic, producerRecord);
     }
 
     public ProducerRecord<Integer, Integer> payloadTemplate(Integer number) {
-        index +=1;
         return new ProducerRecord<>("My_Kafka_Topic", null, index, number);
     }
 }
